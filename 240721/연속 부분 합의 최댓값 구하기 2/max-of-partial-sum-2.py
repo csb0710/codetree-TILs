@@ -1,5 +1,7 @@
 n = int(input())
-arr = list(map(int, input().split(' ')))
+user_input = input().strip()
+    
+arr = list(map(int, user_input.split()))
 
 result = -1001
 temp = 0

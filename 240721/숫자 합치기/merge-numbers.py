@@ -10,6 +10,6 @@ while len(arr) > 1:
     s = arr.pop(0)
     temp = f + s
     result += temp
-    arr.append(temp)
+    arr.insert(0, temp)
 
 print(result)

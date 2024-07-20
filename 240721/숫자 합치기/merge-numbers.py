@@ -1,15 +1,18 @@
+import heapq
+
 n = int(input())
 uinput = input()
 arr = list(map(int, uinput.split()))
 
+heapq.heapify(arr)
 result = 0
 
 while len(arr) > 1:
-    arr.sort()
-    f = arr.pop(0)
-    s = arr.pop(0)
+    f = heapq.heappop(arr)
+    s = heapq.heappop(arr)
     temp = f + s
     result += temp
-    arr.insert(0, temp)
+    heapq.heappush(arr, temp)
+
 
 print(result)

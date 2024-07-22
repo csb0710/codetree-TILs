@@ -1,6 +1,6 @@
 n = int(input())
 arr = list(map(int, input().split()))
-dp = [[0] * n for _ in range(4)]
+dp = [[-1000001] * n for _ in range(4)]
 
 dp[0][1] = arr[1]
 dp[1][0] = arr[0]

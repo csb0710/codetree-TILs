@@ -11,7 +11,7 @@ for i in range(2, n):
     dp[0][i] = dp[0][i-2] + arr[i]
     dp[1][i] = max(dp[0][i-1], dp[1][i-2]) + arr[i]
     dp[2][i] = max(dp[1][i-1], dp[2][i-2]) + arr[i]
-    dp[3][i] = dp[3][i-1] + arr[i]
+    dp[3][i] = dp[3][i-2] + arr[i]
 
 for i in range(4):
     result = max(result, dp[i][n-1])
